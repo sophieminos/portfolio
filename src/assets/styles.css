@@ -1,0 +1,221 @@
+.button-item {
+    padding: 10px 30px;
+    background-color: #F5F5F5;
+    text-decoration: none;
+    color: #000000;
+    border-radius: 2em;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.button-item:hover {
+    background-color: #c7c6bd;
+}
+
+hr {
+    border: 1px solid #ffffff;
+}
+
+/* table */
+.portfolio-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.portfolio-table tr {
+    border-bottom: #205E33 1px solid;
+}
+.portfolio-table th, .portfolio-table td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* general */
+h1, h2, h3 {
+    text-transform: uppercase;
+    font-family: "Sofia Sans Condensed", sans-serif;
+}
+h1 {
+    font-size: 2.5em;
+    color: #205E33;
+}
+h2 {
+    font-size: 1.5em;
+}
+h3 {
+    font-size: 1.2em;
+}
+.title-page {
+    margin-top: 60px;
+}
+a {
+    text-decoration: none;
+    color: #205E33;
+}
+section {
+    margin: 10px 0 100px 0;
+}
+.section-bg {
+    background-color: #E2E1D8;
+}
+
+
+
+/* projects */
+.projects-section ul {
+    padding-left: 0;
+    margin: 0 0 10px 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+.projects-section ul li {
+    flex: 1 1 30%;
+    box-sizing: border-box;
+    max-width: 30%;
+    padding: 10px;
+}
+.projects-section ul li .thumbnail {
+    background-color: #E2E1D8;
+    width: 100%;
+    padding-top: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.projects-section ul li .thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100% - 30px);
+    width: calc(100% - 30px);
+    padding: 15px;
+    object-fit: contain;
+}
+.projects-section ul li .thumbnail .tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    padding: 2px 15px;
+    z-index: 999;
+    text-transform: uppercase;
+    background-color: #205E33;
+    color: #ffffff;
+    border-radius: 1em;
+}
+.projects-section ul li a {
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #205E33;
+}
+
+
+/* page */
+.page {
+    text-align: center;
+    padding: 20px;
+}
+.header-title {
+    padding: 20px;
+}
+.header-title .menu {
+    background-color: #E2E1D8;
+}
+.header-title h1 {
+    color: #000000;
+    margin-top: 60px;
+}
+
+/* skills */
+.skills-section-languages-list, .skills-section-tech-list {
+    list-style-type: none;
+    display: flex;
+    padding-left: 0;
+}
+.skills-section-languages-list {
+    justify-content: center;
+    gap: 50px;
+}
+.skills-section-languages-item {
+    max-width: 200px;
+}
+.skills-section-languages-item>img {
+    max-width: 50%;
+    display: block;
+    margin: 10px auto;
+}
+.skills-section-languages-item-note {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.skills-section-languages-item-note img {
+    width: auto;
+    height: 20px;
+}
+
+.skills-section-tech-list {
+    flex-wrap: wrap;
+    align-items: center;
+}
+.skills-section-tech-list li {
+    width: 20%;
+    margin-bottom: 30px;
+}
+.skills-section-tech-list img, .skills-section-tech .portfolio-table img {
+    max-width: 60px;
+    max-height: 40px;
+    height: auto;
+    width: auto;
+}
+
+.skills-section-tech {
+    margin-bottom: 50px;
+}
+
+.skills-section-tech .portfolio-table tr {
+    height: 50px !important;
+    overflow: hidden;
+}
+.skills-section-tech .portfolio-table tr td {
+    overflow: hidden;
+    text-align: center;
+}
+.skills-section-tech .portfolio-table img {
+    max-width: none;
+}
+
+
+/* bordered table */
+.bordered-portfolio-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.bordered-portfolio-table th,
+.bordered-portfolio-table td {
+    border: 1px solid #205E33;
+    padding: 10px;
+    text-align: left;
+}
+.bordered-portfolio-table td b {
+    color: #205E33;
+}
+.bordered-portfolio-table th {
+    background-color: #E2E1D8;
+}
+.bordered-portfolio-table th:first-child {
+    border-top-left-radius: 5px;
+}
+.bordered-portfolio-table th:last-child {
+    border-top-right-radius: 5px;
+}
+.bordered-portfolio-table tr:last-child td:first-child {
+    border-bottom-left-radius: 5px;
+}
+.bordered-portfolio-table tr:last-child td:last-child {
+    border-bottom-right-radius: 5px;
+}
