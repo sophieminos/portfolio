@@ -1,6 +1,5 @@
 <script setup>
 
-import MenuComponent from "@/components/MenuComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 
 </script>
@@ -10,7 +9,7 @@ import FooterComponent from "@/components/FooterComponent.vue";
 
     <header>
       <header class="header-title">
-        <MenuComponent/>
+        <!--<MenuComponent/>-->
         <h1>{{ project.title }}</h1>
         <div class="description-project-detail-section">
           <p>{{ project.description }}</p>

@@ -1,16 +1,5 @@
 <template>
   <div class="page">
-    <!-- the most visible of the page -->
-    <header class="hero-section section-bg">
-      <MenuComponent/>
-      <div class="title-page hello-text">Hi there, I'm Sophie Minos</div>
-      <div class="hero-container-description">
-        <div><h1>Student in software engineering</h1></div>
-        <div class="hero-image"></div>
-        <div><h1>Full-Stack developer</h1></div>
-      </div>
-    </header>
-
     <section class="projects-section">
     <h1>recent projects</h1>
       <ul>
@@ -58,8 +47,8 @@
           <td class="testimonial-item">
             <cite>Sophie demonstrates professionalism and rigor; she integrates perfectly within the team and brings relevant and effective ideas. She is a major asset to the company.</cite>
             <div class="testimonial-item-author">
-              <div class="testimonial-item-author-name">Pascal VIGANT</div>
-              <div class="testimonial-item-author-description"><a href="http://www.wizin.fr" target="_blank">Wizin</a>&nbsp;CTO</div>
+              <div class="testimonial-item-author-name"><a href="https://fr.linkedin.com/in/pascal-vigant" target="_blank">Pascal VIGANT</a></div>
+              <!--<div class="testimonial-item-author-description"><a href="http://www.wizin.fr" target="_blank">Wizin</a>&nbsp;CTO</div>-->
               <br>
               <span style="font-weight: lighter; font-size: small; font-style: italic;">(translated from the original)</span>
             </div>
@@ -74,7 +63,6 @@
         </tr>
       </table>
     </section>
-    <FooterComponent/>
     <!--<button style="display: none" @click="handleButtonClick">Learn More</button>-->
   </div>
 </template>
@@ -83,8 +71,6 @@
 
 import { ref } from 'vue';
 import {projects} from "@/constants";
-import MenuComponent from "@/components/MenuComponent.vue";
-import FooterComponent from "@/components/FooterComponent.vue";
 
 const experience = ref([
   { id: 1, date: '2022-now', title: 'Experience 1' },
@@ -100,38 +86,7 @@ const experience = ref([
 <style scoped>
 
 
-/* hero section */
-.hello-text {
-  font-family: "Oooh Baby", cursive;
-  text-transform: capitalize;
-  margin: 50px 0 20px 0;
-  font-size: 2em;
-}
-.hero-section {
-  padding: 20px 20px 0 20px;
-}
-.hero-container-description {
-  display: flex;
-  justify-content: stretch;
-  padding: 0 20px;
-}
-.hero-container-description>div {
-  width: 33%;
-  align-self: center;
-  text-align: left;
-}
-.hero-container-description .hero-image {
-  background-image: url('@/assets/sophie-profile.png');
-  background-size: contain;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  position: relative;
-  height: auto;
-  min-height: 350px;
-}
-.hero-container-description div:first-child h1 {
-  text-align: end;
-}
+
 
 /* apprenticeship section */
 .apprenticeship-section {

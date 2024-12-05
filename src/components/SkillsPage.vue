@@ -1,19 +1,9 @@
 <script setup>
-import MenuComponent from "@/components/MenuComponent.vue";
-import FooterComponent from "@/components/FooterComponent.vue";
 
 </script>
 
 <template>
   <div class="page">
-
-    <header>
-      <header class="header-title">
-        <MenuComponent/>
-        <h1>skills</h1>
-      </header>
-    </header>
-
     <section class="skills-section">
       <h1>languages</h1>
       <ul class="skills-section-languages-list">
@@ -253,7 +243,6 @@ import FooterComponent from "@/components/FooterComponent.vue";
         </div>
       </div>
     </section>
-    <FooterComponent/>
   </div>
 
 </template>

@@ -118,8 +118,9 @@ section {
 }
 .header-title {
     padding: 20px;
+    text-align: center;
 }
-.header-title .menu {
+.header-title:not(.hero-section) .menu {
     background-color: #E2E1D8;
 }
 .header-title h1 {
@@ -219,3 +220,40 @@ section {
 .bordered-portfolio-table tr:last-child td:last-child {
     border-bottom-right-radius: 5px;
 }
+
+
+
+
+
+/* hero section */
+.hello-text {
+    font-family: "Oooh Baby", cursive;
+    text-transform: capitalize;
+    margin: 50px 0 20px 0;
+    font-size: 2em;
+  }
+  .hero-section {
+    padding: 20px 20px 0 20px;
+  }
+  .hero-container-description {
+    display: flex;
+    justify-content: stretch;
+    padding: 0 20px;
+  }
+  .hero-container-description>div {
+    width: 33%;
+    align-self: center;
+    text-align: left;
+  }
+  .hero-container-description .hero-image {
+    background-image: url('@/assets/sophie-profile.png');
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    position: relative;
+    height: auto;
+    min-height: 350px;
+  }
+  .hero-container-description div:first-child h1 {
+    text-align: end;
+  }

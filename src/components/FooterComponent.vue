@@ -5,7 +5,7 @@
 <template>
   <footer class="footer-section section-bg" id="contact-information">
     <div class="footer-section-email">
-      <div>You can email me at</div>
+      <div>You can <a href= "mailto:sophieminos01@gmail.com">email me</a> at</div>
       <div class="footer-section-email-name">sophieminos01@gmail.com</div>
     </div>
     <div class="footer-section-items">
