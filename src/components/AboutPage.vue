@@ -7,14 +7,14 @@ import BaseLayout from '@/layouts/BaseLayout.vue';
     <!-- header -->
     <template #header>
       <div>
-        <h1>Contact</h1>
+        <h1>About</h1>
       </div>
     </template>
 
     <!-- main -->
     <div class="page">
       <section class="">
-        Contact body
+        About body
       </section>
     </div>
   </BaseLayout>

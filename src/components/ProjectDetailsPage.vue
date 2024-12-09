@@ -1,75 +1,69 @@
-<script setup>
-
-import FooterComponent from "@/components/FooterComponent.vue";
-
-</script>
 
 <template>
-  <div class="page">
+  <BaseLayout>
+    <!-- header -->
+    <template v-slot:header>
+      <h1>{{ project.title }}</h1>
+      <div class="description-project-detail-section">
+        <p>{{ project.description }}</p>
+      </div>
+      <img class="thumbnail-project-detail" :src="require(`@/assets/${project.img}`)" alt="{{project.title}}"/>
+    </template>
 
-    <header>
-      <header class="header-title">
-        <!--<MenuComponent/>-->
-        <h1>{{ project.title }}</h1>
-        <div class="description-project-detail-section">
-          <p>{{ project.description }}</p>
+    <!-- main -->
+    <div class="page">
+      <section class="content-project-detail-section">
+        <div v-if="project.skills.length > 0">
+          <h2>Skills</h2>
+          <ul class="skills-section-tech-list">
+            <li v-for="(skill, index) in project.skills" :key="index">
+              <img v-if="skill.img !== ''" :src="require(`@/assets/skills/${skill.img}`)" alt="{{skill.name}}"/>
+              <div>{{ skill.name }}</div>
+            </li>
+          </ul>
         </div>
-        <img class="thumbnail-project-detail" :src="require(`@/assets/${project.img}`)" alt="{{project.title}}"/>
-      </header>
-    </header>
-
-    <section class="content-project-detail-section">
-      <div v-if="project.skills.length > 0">
-        <h2>Skills</h2>
-        <ul class="skills-section-tech-list">
-          <li v-for="(skill, index) in project.skills" :key="index">
-            <img v-if="skill.img !== ''" :src="require(`@/assets/skills/${skill.img}`)" alt="{{skill.name}}"/>
-            <div>{{ skill.name }}</div>
-          </li>
-        </ul>
-      </div>
-      <div v-if="project.features.length > 0">
-        <h2>Features</h2>
-        <table  class="bordered-portfolio-table">
-          <thead>
-            <th>Feature</th>
-            <th>Description</th>
-          </thead>
-          <tbody>
-            <tr v-for="(feature, index) in project.features" :key="index">
-              <td><b>{{ feature.name }}</b></td>
-              <td>{{ feature.description }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="video-project-detail" v-if="project.video !== ''">
-        <h2>Video of presentation</h2>
-        <iframe
-            :src="`${project.video}/preview`"
-            width="640"
-            height="400"
-            allow="autoplay"
-            allowfullscreen>
-        </iframe>
-      </div>
-      <div v-if="project.gallery.length > 0">
-        <h2>Gallery</h2>
-        <div class="gallery">
-          <div v-for="(image, index) in project.gallery" :key="index" class="gallery-item" :double-item="isLandscape(image)">
-            <img :src="require(`@/assets/projects/${image.src}`)" :alt="image.legend" />
-            <i>{{ image.legend }}</i>
+        <div v-if="project.features.length > 0">
+          <h2>Features</h2>
+          <table  class="bordered-portfolio-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(feature, index) in project.features" :key="index">
+                <td><b>{{ feature.name }}</b></td>
+                <td>{{ feature.description }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="video-project-detail" v-if="project.video !== ''">
+          <h2>Video of presentation</h2>
+          <iframe
+              :src="`${project.video}/preview`"
+              width="640"
+              height="400"
+              allow="autoplay"
+              allowfullscreen>
+          </iframe>
+        </div>
+        <div v-if="project.gallery.length > 0">
+          <h2>Gallery</h2>
+          <div class="gallery">
+            <div v-for="(image, index) in project.gallery" :key="index" class="gallery-item" :double-item="isLandscape(image)">
+              <img :src="require(`@/assets/projects/${image.src}`)" :alt="image.legend" />
+              <i>{{ image.legend }}</i>
+            </div>
           </div>
         </div>
-      </div>
       </section>
       <section>
         <router-link to="/projects" class="button-item">Back to Projects</router-link>
       </section>
-      <section>
-      <FooterComponent/>
-    </section>
-  </div>
+    </div>
+  </BaseLayout>
 </template>
 
 <style scoped>
@@ -123,8 +117,12 @@ p, .bordered-portfolio-table, .gallery {
 
 <script>
 import {projects} from "@/constants";
+import BaseLayout from "@/layouts/BaseLayout.vue";
 
 export default {
+  components: {
+    BaseLayout
+  },
   props: ['id'],
   data() {
     return {

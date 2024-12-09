@@ -4,13 +4,14 @@ import ProjectsPage from "./components/ProjectsPage.vue";
 import SkillsPage from "@/components/SkillsPage.vue";
 import ProjectDetailsPage from "@/components/ProjectDetailsPage.vue";
 import ContactPage from './components/ContactPage.vue';
+import AboutPage from './components/AboutPage.vue';
 
 const routes = [
-    { path: '/', component: HomePage, meta: { title: 'Home', description: '' } },
-    { path: '/projects', component: ProjectsPage, meta: { title: 'Projects', description: 'Here are some of my interesting projects:' } },
-    { path: '/skills', component: SkillsPage, meta: { title: 'Skills', description: ''  } },
-    { path: '/about', component: HomePage, meta: { title: 'About', description: ''  } },
-    { path: '/contact', component: ContactPage, meta: { title: 'Contact', description: ''  } },
+    { path: '/', component: HomePage, meta: { title: 'Home' } },
+    { path: '/projects', component: ProjectsPage, meta: { title: 'Projects' } },
+    { path: '/skills', component: SkillsPage, meta: { title: 'Skills' } },
+    { path: '/about', component: AboutPage, meta: { title: 'About'  } },
+    { path: '/contact', component: ContactPage, meta: { title: 'Contact' } },
     { path: '/projects/:id', component: ProjectDetailsPage, props: true },
 ];
 
