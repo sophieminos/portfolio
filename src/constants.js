@@ -1,7 +1,7 @@
 import {ref} from "vue";
 
 // projects
-export const projects= ref([
+const projects= ref([
     {
         id: 1,
         title: 'PHP invoicing software',
@@ -145,3 +145,16 @@ export const projects= ref([
         ]
     }
 ]);
+
+const studies = ref([
+{ id: 1, date: '2022-2025', title: 'Engineering degree, Software Engineering', school: 'EFREI PARIS', description: 'Three years engineering program in apprenticeship. Software development and Information Systems curriculum.' },
+{ id: 2, date: '2020-2022', title: 'Bachelor degree, Computer Science', school: 'Paris Institute of Technology (Paris Cité university)', description: 'Computer science and software development, combined with a generalist background. Advanced skills in concurrency and reflexivity in java.'},
+{ id: 3, date: '2016-2019', title: 'High school diploma in sciences', school: 'Lycée Henri Avril – Lamballe (France)'}
+]);
+
+const experiences = ref([
+    { id: 1, date: 'Sept 2022-now', title: 'Full-Stack Developer (apprenticeship)', company: 'WIZIN (France)', description: 'Creating a billing software with timesheet management and administration. Proficiency in PHP and SQL for the back-end, HTML, CSS and jQuery for the front-end' },
+    { id: 2, date: 'April-June 2022', title: 'Web Integrator (internship)', company: 'DIGITAL HOUSE GROUP (France)', description: 'After technological monitoring and modeling, customization of a WordPress theme in HTML, CSS and Javascript'},
+]);
+
+export {projects, studies, experiences }

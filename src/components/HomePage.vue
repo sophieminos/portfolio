@@ -41,17 +41,69 @@
       </section>
       <section class="apprenticeship-section section-bg">
         <div class="apprenticeship-description">
-          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis imperdiet nibh vitae viverra. </div>
-          <div><img src="" alt=""></div>
-          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis imperdiet nibh vitae viverra. </div>
-          <div><img src="" alt=""></div>
+          <div>
+            I developed decision-making skills by regularly choosing the most effective solutions for issues or improvements in the workplace. 
+          </div>
+          <div>
+            <svg width="default" height="default" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <path id="firstPath" d="M10,60 C10,60 120,100 190,60" fill="none" />
+              </defs>
+              <text font-size="35" font-family="'Sofia Sans Condensed', sans-serif" fill="#ef476f" text-transform="uppercase">
+                <textPath href="#firstPath">
+                  Decision making
+                </textPath>
+              </text>
+            </svg>
+          </div>
+          <div>
+            I identified issues in workflows by debugging step by step and that improved efficiency.
+          </div>
+          <div>
+            <svg width="default" height="default" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <path id="secondPath" d="M10,80 C10,80 100,20 190,80" fill="none" />
+              </defs>
+              <text font-size="35" font-family="'Sofia Sans Condensed', sans-serif" fill="#cc8f02" text-transform="uppercase">
+                <textPath href="#secondPath">
+                  Problem solving
+                </textPath>
+              </text>
+            </svg>
+          </div>
         </div>
         <h1>Apprenticeship</h1>
         <div class="apprenticeship-description">
-          <div><img src="" alt=""></div>
-          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis imperdiet nibh vitae viverra. </div>
-          <div><img src="" alt=""></div>
-          <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis imperdiet nibh vitae viverra. </div>
+          <div>
+            <svg width="default" height="default" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <path id="thirdPath" d="M10,80 C10,80 100,20 190,80" fill="none" />
+              </defs>
+              <text font-size="35" font-family="'Sofia Sans Condensed', sans-serif" fill="#118ab2" text-transform="uppercase">
+                <textPath href="#thirdPath">
+                  Active listening
+                </textPath>
+              </text>
+            </svg>
+          </div>
+          <div>
+            I actively listened to my manager, asking relevant questions, and ensuring that I clearly understood instructions, which helped me avoiding misunderstandings in the project.
+          </div>
+          <div>
+            <svg width="default" height="default" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <path id="firstPath" d="M10,60 C10,60 120,100 190,60" fill="none" />
+              </defs>
+              <text font-size="35" font-family="'Sofia Sans Condensed', sans-serif" fill="#1cb88f" text-transform="uppercase">
+                <textPath href="#firstPath">
+                  Technical Skills
+                </textPath>
+              </text>
+            </svg>
+          </div>
+          <div>
+            I gained practical technical skills in programmation, allowing me to contribute directly to projects with my gained expertise and be a major actor within a team.
+          </div>
         </div>
       </section>
       <section class="testimonial-section">
@@ -62,18 +114,11 @@
               <cite>Sophie demonstrates professionalism and rigor; she integrates perfectly within the team and brings relevant and effective ideas. She is a major asset to the company.</cite>
               <div class="testimonial-item-author">
                 <div class="testimonial-item-author-name"><a href="https://fr.linkedin.com/in/pascal-vigant" target="_blank">Pascal VIGANT</a></div>
-                <!--<div class="testimonial-item-author-description"><a href="http://www.wizin.fr" target="_blank">Wizin</a>&nbsp;CTO</div>-->
+                <div class="testimonial-item-author-description"><a href="http://www.wizin.fr" target="_blank">Wizin</a>&nbsp;CTO</div>
                 <br>
                 <span style="font-weight: lighter; font-size: small; font-style: italic;">(translated from the original)</span>
               </div>
             </td>
-            <!--<td class="testimonial-item">
-              <cite>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mollis imperdiet nibh vitae viverra. Etiam leo ligula, mattis sit amet pretium accumsan, pretium eget ex. Suspendisse euismod nibh non magna sodales, sit amet posuere enim vulputate. Mauris id tincidunt dolor. Vestibulum ac vestibulum libero. Sed vitae velit eget nulla ultrices ultricies.</cite>
-              <div class="testimonial-item-author">
-                <div class="testimonial-item-author-name">author</div>
-                <div class="testimonial-item-author-description">description</div>
-              </div>
-            </td>-->
           </tr>
         </table>
       </section>
@@ -112,19 +157,22 @@ const experience = ref([
 }
 .apprenticeship-section .apprenticeship-description div {
   width: 25%;
-  min-height: 200px;
+  /*min-height: 200px;*/
   align-content: center;
-  text-align: justify;
+  text-align: center;
   padding: 10px;
 }
 
 /* testimonial section */
+.testimonial-items {
+  width: 50%;
+  margin: 0 auto;
+}
 .testimonial-item {
   padding: 20px 40px;
-  width: 50%;
 }
 .testimonial-item:first-child {
-  border-right: 1px solid #205E33;
+  border-right: 2px solid #205E33;
 }
 .testimonial-item cite {
   text-align: justify;
@@ -137,6 +185,8 @@ const experience = ref([
   font-family: "Jomhuria", serif;
   position: absolute;
   font-size: 2em;
+  color: #205E33;
+  font-weight: bold;
 }
 .testimonial-item cite:before {
   transform: scaleY(-1);

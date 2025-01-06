@@ -1,3 +1,9 @@
+#app {
+    overflow: hidden;
+}
+
+
+
 .button-item {
     padding: 10px 30px;
     background-color: #F5F5F5;
@@ -50,6 +56,10 @@ h3 {
 }
 a {
     text-decoration: none;
+    color: #205E33;
+}
+a:active {
+    text-decoration: underline;
     color: #205E33;
 }
 section {
@@ -257,3 +267,6 @@ section {
   .hero-container-description div:first-child h1 {
     text-align: end;
   }
+
+
+

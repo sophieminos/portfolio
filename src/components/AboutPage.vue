@@ -1,20 +1,41 @@
 <script setup>
 import BaseLayout from '@/layouts/BaseLayout.vue';
+import {studies, experiences} from "@/constants";
 </script>
 
 <template>
   <BaseLayout>
     <!-- header -->
     <template #header>
-      <div>
-        <h1>About</h1>
-      </div>
     </template>
 
     <!-- main -->
     <div class="page">
-      <section class="">
-        About body
+      <section class="studies-section">
+        <h1>Studies</h1>
+        <table class="portfolio-table">
+          <tr v-for="exp in studies" :key="exp.id">
+            <td><b>{{ exp.date }}</b></td>
+            <td>
+              <h3>{{ exp.title }}</h3>
+              <span>{{ exp.school }}</span>
+              <p>{{ exp.description }}</p>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <section class="studies-section">
+        <h1>Work experience</h1>
+        <table class="portfolio-table">
+          <tr v-for="exp in experiences" :key="exp.id">
+            <td><b>{{ exp.date }}</b></td>
+            <td>
+              <h3>{{ exp.title }}</h3>
+              <span>{{ exp.company }}</span>
+              <p>{{ exp.description }}</p>
+            </td>
+          </tr>
+        </table>
       </section>
     </div>
   </BaseLayout>
