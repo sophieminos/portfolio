@@ -3,11 +3,12 @@
     <!-- header -->
     <template #header>
       <div class="hero-section section-bg">
+        <ScollingBannerComponent/>
         <div class="title-page hello-text">Hi there, I'm Sophie Minos</div>
         <div class="hero-container-description">
-          <div><h1>Student in Software Engineering</h1></div>
+          <div><h1>Student in <span style="color:#ef476f">Software Engineering</span></h1></div>
           <div class="hero-image"></div>
-          <div><h1>Full-Stack Developer</h1></div>
+          <div><h1><span style="color:#ef476f">Full-Stack</span> Developer</h1></div>
         </div>
       </div>
     </template>
@@ -17,14 +18,13 @@
       <section class="projects-section">
       <h1>recent projects</h1>
         <ul>
-          <li v-for="project in projects.slice().reverse().slice(0, 3)" :key="project.id">
-            <div class="thumbnail">
-              <div class="tag">{{ project.tag }}</div>
-              <img :src="require(`@/assets/${project.img}`)" alt="{{project.title}}"/>
-            </div>
-            <h3>{{ project.title }}</h3>
+          <li v-for="project in projects.slice().reverse().slice(0, 5)" :key="project.id">
             <router-link :to="`/projects/${project.id}`">
-              View Project
+              <div class="thumbnail">
+                <div class="tag">{{ project.tag }}</div>
+                <img :src="require(`@/assets/${project.img}`)" alt="{{project.title}}"/>
+              </div>
+              <h3>{{ project.title }}</h3>
             </router-link>
           </li>
         </ul>
@@ -33,19 +33,21 @@
       <section style="display: none" class="experiences-skills-section">
         <h1>experiences & skills</h1>
         <table class="portfolio-table">
-          <tr v-for="exp in experience" :key="exp.id">
-            <td>{{ exp.date }}</td>
-            <td>{{ exp.title }}</td>
-          </tr>
+          <tbody>
+            <tr v-for="exp in experience" :key="exp.id">
+              <td>{{ exp.date }}</td>
+              <td>{{ exp.title }}</td>
+            </tr>
+          </tbody>
         </table>
       </section>
       <section class="apprenticeship-section section-bg">
         <div class="apprenticeship-description">
           <div>
-            I developed decision-making skills by regularly choosing the most effective solutions for issues or improvements in the workplace. 
+            I developed <b>decision-making</b> skills by regularly choosing the most effective solutions for issues or improvements in the workplace. 
           </div>
           <div>
-            <svg width="default" height="default" xmlns="http://www.w3.org/2000/svg">
+            <svg  xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <path id="firstPath" d="M10,60 C10,60 120,100 190,60" fill="none" />
               </defs>
@@ -57,10 +59,10 @@
             </svg>
           </div>
           <div>
-            I identified issues in workflows by debugging step by step and that improved efficiency.
+            I <b>identified issues</b> in workflows by debugging step by step and that improved efficiency.
           </div>
           <div>
-            <svg width="default" height="default" xmlns="http://www.w3.org/2000/svg">
+            <svg  xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <path id="secondPath" d="M10,80 C10,80 100,20 190,80" fill="none" />
               </defs>
@@ -75,7 +77,7 @@
         <h1>Apprenticeship</h1>
         <div class="apprenticeship-description">
           <div>
-            <svg width="default" height="default" xmlns="http://www.w3.org/2000/svg">
+            <svg  xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <path id="thirdPath" d="M10,80 C10,80 100,20 190,80" fill="none" />
               </defs>
@@ -87,10 +89,10 @@
             </svg>
           </div>
           <div>
-            I actively listened to my manager, asking relevant questions, and ensuring that I clearly understood instructions, which helped me avoiding misunderstandings in the project.
+            I actively <b>listened to my manager</b>, asking relevant questions, and ensuring that I clearly understood instructions, which helped me avoiding misunderstandings in the project.
           </div>
           <div>
-            <svg width="default" height="default" xmlns="http://www.w3.org/2000/svg">
+            <svg  xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <path id="firstPath" d="M10,60 C10,60 120,100 190,60" fill="none" />
               </defs>
@@ -102,24 +104,30 @@
             </svg>
           </div>
           <div>
-            I gained practical technical skills in programmation, allowing me to contribute directly to projects with my gained expertise and be a major actor within a team.
+            I gained <b>practical technical skills</b> in programmation, allowing me to contribute directly to projects with my gained expertise and be a major actor within a team.
           </div>
         </div>
       </section>
       <section class="testimonial-section">
         <h1>What people say about me</h1>
         <table class="testimonial-items">
-          <tr>
-            <td class="testimonial-item">
-              <cite>Sophie demonstrates professionalism and rigor; she integrates perfectly within the team and brings relevant and effective ideas. She is a major asset to the company.</cite>
-              <div class="testimonial-item-author">
-                <div class="testimonial-item-author-name"><a href="https://fr.linkedin.com/in/pascal-vigant" target="_blank">Pascal VIGANT</a></div>
-                <div class="testimonial-item-author-description"><a href="http://www.wizin.fr" target="_blank">Wizin</a>&nbsp;CTO</div>
-                <br>
-                <span style="font-weight: lighter; font-size: small; font-style: italic;">(translated from the original)</span>
-              </div>
-            </td>
-          </tr>
+          <tbody>
+            <tr>
+              <td class="testimonial-item">
+                <cite>Sophie demonstrates professionalism and rigor; she integrates perfectly within the team and brings relevant and effective ideas. She is a major asset to the company.</cite>
+                <div class="testimonial-item-author">
+                  <div class="testimonial-item-author-name"><a href="https://fr.linkedin.com/in/pascal-vigant" target="_blank">Pascal VIGANT</a></div>
+                  <div class="testimonial-item-author-description">
+                    <a href="https://www.linkedin.com/company/wizin-partners/" target="_blank">
+                      Wizin
+                    </a>
+                    CTO</div>
+                  <br>
+                  <span style="font-weight: lighter; font-size: small; font-style: italic;">(translated from the original)</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
         </table>
       </section>
       <!--<button style="display: none" @click="handleButtonClick">Learn More</button>-->
@@ -132,6 +140,8 @@
 import { ref } from 'vue';
 import {projects} from "@/constants";
 import BaseLayout from '@/layouts/BaseLayout.vue';
+import ScollingBannerComponent from '@/components/ScollingBannerComponent.vue';
+
 
 const experience = ref([
   { id: 1, date: '2022-now', title: 'Experience 1' },

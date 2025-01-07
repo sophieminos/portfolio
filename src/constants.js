@@ -64,8 +64,8 @@ const projects= ref([
         tag: 'school',
         skills: [
             { name: 'SQL with Azure', img: 'azure-logo.png' },
-            { name: 'Conceptual Data Model (CDM)', img: '' },
-            { name: 'Logical Data Model (LDM)', img: '' },
+            { name: 'Conceptual Data Model (CDM)', img: 'CDM.png' },
+            { name: 'Logical Data Model (LDM)', img: 'LDM.png' },
         ],
         video: '',
         features: [
@@ -78,6 +78,32 @@ const projects= ref([
     },
     {
         id: 4,
+        title: 'Web api with cloud monitoring',
+        description: 'A school project',
+        img: 'devops-project.png',
+        tag: 'school',
+        skills: [
+            { name: 'Docker', img: 'docker-logo.png' },
+            { name: 'Minikube', img: 'minikube-logo.png' },
+            { name: 'Kubernetes', img: 'kubernetes-logo.png' },
+            { name: 'Grafana', img: 'grafana-logo.png' },
+            { name: 'Prometheus', img: 'prometheus-logo.png' },
+            { name: 'Loki', img: 'loki-logo.png' },
+        ],
+        video: '',
+        features: [
+            { name: 'Pipeline', description: 'A pipeline is executed to deploy the webapi from a Docker image (and after with "pack") and Kubernetes deployment files' },
+            { name: 'Namespaces', description: 'To separate development and production deployments. Development is in NodePort mode and Production is in ClusterIP mode for safety reasons.' },
+            { name: 'Port-forwarding', description: 'To access the production webapi from outside the cluster' },
+            { name: 'Alerts', description: 'Alerts using Prometheus in Grafana' },
+            { name: 'Logs', description: 'Request to extract relevant informations from logs using Loki in Grafana' },
+        ],
+        gallery: [
+            
+        ]
+    },
+    {
+        id: 5,
         title: 'Django ecommerce website',
         description: 'This website is aimed at the business of an illustrator. It includes a lot of features such as purchases, slideshow, blog, a rich admin and customer interface and others.',
         img: 'django-ecommerce-project.png',
@@ -107,7 +133,7 @@ const projects= ref([
         gallery: []
     },
     {
-        id: 5,
+        id: 6,
         title: 'IOS flashcards app',
         description: 'A flashcards app to review efficiently vocabulary. I programmed and used it while I was in Toronto to improve my English.',
         img: 'ios-project.png',

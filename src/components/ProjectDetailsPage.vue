@@ -41,13 +41,15 @@
         </div>
         <div class="video-project-detail" v-if="project.video !== ''">
           <h2>Video of presentation</h2>
-          <iframe
+          <div>
+            <iframe
               :src="`${project.video}/preview`"
               width="640"
               height="400"
               allow="autoplay"
               allowfullscreen>
-          </iframe>
+            </iframe>
+          </div>
         </div>
         <div v-if="project.gallery.length > 0">
           <h2>Gallery</h2>

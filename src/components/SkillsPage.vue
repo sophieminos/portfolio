@@ -30,7 +30,6 @@ import BaseLayout from "@/layouts/BaseLayout.vue";
               <img src="@/assets/skills/ets-logo.png" alt="ets">
               <div>
                 <div>TOEIC: ...</div>
-                <div>IELTS: ...</div>
               </div>
             </div>
           </li>
@@ -107,6 +106,24 @@ import BaseLayout from "@/layouts/BaseLayout.vue";
           </div>
 
           <div class="skills-section-tech">
+            <h2>Cloud computing</h2>
+            <ul class="skills-section-tech-list">
+              <li>
+                <img src="@/assets/skills/docker-logo.png" alt="docker">
+                <div>Docker</div>
+              </li>
+              <li>
+                <img src="@/assets/skills/kubernetes-logo.png" alt="kubernetes">
+                <div>Kubernetes in Minikube</div>
+              </li>
+              <li>
+                <img src="@/assets/skills/grafana-logo.png" alt="grafana">
+                <div>Monitoring in Grafana <br>(Prometheus & Loki)</div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="skills-section-tech">
             <h2>Software development</h2>
             <ul class="skills-section-tech-list">
               <li>
@@ -158,21 +175,26 @@ import BaseLayout from "@/layouts/BaseLayout.vue";
                 <div>Figma</div>
               </li>
               <li>
+                <img src="@/assets/skills/UCD.png" alt="use case diagram">
                 <div>Use Case diagram</div>
               </li>
               <li>
+                <img src="@/assets/skills/CDM.png" alt="conceptual data model">
                 <div>Conceptual Data Model (CDM)</div>
               </li>
               <li>
+                <img src="@/assets/skills/LDM.png" alt="logical data model">
                 <div>Logical Data Model (LDM)</div>
               </li>
               <li>
+                <img src="@/assets/skills/CD.png" alt="class diagram">
                 <div>Class diagram</div>
               </li>
               <li>
                 <div>State Transition diagram</div>
               </li>
               <li>
+                <img src="@/assets/skills/SD.png" alt="sequence diagram">
                 <div>Sequence diagram</div>
               </li>
               <li>
@@ -191,60 +213,62 @@ import BaseLayout from "@/layouts/BaseLayout.vue";
                   <th>Skills</th>
                 </tr>
               </thead>
-              <tr>
-                <td>SQL</td>
-                <td>
-                  <ul class="skills-section-tech-list">
-                    <li><img src="@/assets/skills/azure-logo.png" alt="azure"></li>
-                    <li><img src="@/assets/skills/oracle-logo.png" alt="oracle"></li>
-                  </ul>
-                </td>
-                <td>
-                  <ul class="skills-section-tech-list">
-                    <li>
-                      <div>Data Definition Language<br>(<b>DDL</b>)</div>
-                    </li>
-                    <li>
-                      <div>Data Query Language<br>(<b>DQL</b>)</div>
-                    </li>
-                    <li>
-                      <div>Data Manipulation Language<br>(<b>DML</b>)</div>
-                    </li>
-                    <li>
-                      <div>Data Control Language<br>(<b>DCL</b>)</div>
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td rowspan="2">NoSQL</td>
-                <td>
-                  <ul class="skills-section-tech-list">
-                    <li><img src="@/assets/skills/elastic-logo.png" alt="elastic"></li>
-                  </ul>
-                </td>
-                <td>
-                  <ul class="skills-section-tech-list">
-                    <li>
-                      <div>Selection and filtering of savings</div>
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <ul class="skills-section-tech-list">
-                    <li><img src="@/assets/skills/firebase-logo.png" alt="firebase"></li>
-                  </ul>
-                </td>
-                <td>
-                  <ul class="skills-section-tech-list">
-                    <li>
-                      <div>Data selection and update from a React Native app</div>
-                    </li>
-                  </ul>
-                </td>
-              </tr>
+              <tbody>
+                <tr>
+                  <td>SQL</td>
+                  <td>
+                    <ul class="skills-section-tech-list">
+                      <li><img src="@/assets/skills/azure-logo.png" alt="azure"></li>
+                      <li><img src="@/assets/skills/oracle-logo.png" alt="oracle"></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul class="skills-section-tech-list">
+                      <li>
+                        <div>Data Definition Language<br>(<b>DDL</b>)</div>
+                      </li>
+                      <li>
+                        <div>Data Query Language<br>(<b>DQL</b>)</div>
+                      </li>
+                      <li>
+                        <div>Data Manipulation Language<br>(<b>DML</b>)</div>
+                      </li>
+                      <li>
+                        <div>Data Control Language<br>(<b>DCL</b>)</div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td rowspan="2">NoSQL</td>
+                  <td>
+                    <ul class="skills-section-tech-list">
+                      <li><img src="@/assets/skills/elastic-logo.png" alt="elastic"></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul class="skills-section-tech-list">
+                      <li>
+                        <div>Selection and filtering of savings</div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <ul class="skills-section-tech-list">
+                      <li><img src="@/assets/skills/firebase-logo.png" alt="firebase"></li>
+                    </ul>
+                  </td>
+                  <td>
+                    <ul class="skills-section-tech-list">
+                      <li>
+                        <div>Data selection and update from a React Native app</div>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
             </table>
           </div>
         
@@ -264,10 +288,14 @@ import BaseLayout from "@/layouts/BaseLayout.vue";
   margin: 0;
 }
 .skills-section-tech .portfolio-table .skills-section-tech-list li {
-  width: 45%;
-  margin-bottom: 20px;
+  width: 25%;
 }
 .skills-section-tech .portfolio-table .skills-section-tech-list img {
-  max-width: 100%;
+  width: 80px;
+  display: block;
+}
+.skills-section-tech img {
+  width: auto;
+  /*height: 40px;*/
 }
 </style>

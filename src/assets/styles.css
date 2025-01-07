@@ -47,7 +47,11 @@ h1 {
 }
 h2 {
     font-size: 1.5em;
+    background-color: #c7c6bd;
+    display: inline-block;
+    padding: 0px 10px;
 }
+
 h3 {
     font-size: 1.2em;
 }
@@ -78,13 +82,13 @@ section {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 5%;
+    gap: 0%;
 }
 .projects-section ul li {
-    flex: 1 1 30%;
+    flex: 1 1 20%;
     box-sizing: border-box;
-    max-width: 30%;
-    padding: 10px;
+    max-width: 20%;
+    padding: 20px;
 }
 .projects-section ul li .thumbnail {
     background-color: #E2E1D8;
@@ -169,9 +173,10 @@ section {
 .skills-section-tech-list {
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 .skills-section-tech-list li {
-    width: 20%;
+    width: calc(100% / 8);
     margin-bottom: 30px;
 }
 .skills-section-tech-list img, .skills-section-tech .portfolio-table img {
