@@ -3,7 +3,6 @@
     <!-- header -->
     <template #header>
       <div class="hero-section section-bg">
-        <ScollingBannerComponent/>
         <div class="title-page hello-text">Hi there, I'm Sophie Minos</div>
         <div class="hero-container-description">
           <div><h1>Student in <span style="color:#ef476f">Software Engineering</span></h1></div>
@@ -140,7 +139,6 @@
 import { ref } from 'vue';
 import {projects} from "@/constants";
 import BaseLayout from '@/layouts/BaseLayout.vue';
-import ScollingBannerComponent from '@/components/ScollingBannerComponent.vue';
 
 
 const experience = ref([

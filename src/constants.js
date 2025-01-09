@@ -172,6 +172,15 @@ const projects= ref([
     }
 ]);
 
+const skills = ref([
+    { id: 1, name: 'Web development' },
+    { id: 2, name: 'Mobile development'},
+    { id: 3, name: 'Cloud computing'},
+    { id: 4, name: 'Software development'},
+    { id: 4, name: 'Representation tools'},
+    { id: 4, name: 'Database languages'},
+]);
+
 const studies = ref([
 { id: 1, date: '2022-2025', title: 'Engineering degree, Software Engineering', school: 'EFREI PARIS', description: 'Three years engineering program in apprenticeship. Software development and Information Systems curriculum.' },
 { id: 2, date: '2020-2022', title: 'Bachelor degree, Computer Science', school: 'Paris Institute of Technology (Paris Cité university)', description: 'Computer science and software development, combined with a generalist background. Advanced skills in concurrency and reflexivity in java.'},
@@ -183,4 +192,4 @@ const experiences = ref([
     { id: 2, date: 'April-June 2022', title: 'Web Integrator (internship)', company: 'DIGITAL HOUSE GROUP (France)', description: 'After technological monitoring and modeling, customization of a WordPress theme in HTML, CSS and Javascript'},
 ]);
 
-export {projects, studies, experiences }
+export { projects, skills, studies, experiences }
