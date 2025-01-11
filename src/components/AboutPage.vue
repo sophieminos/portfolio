@@ -19,7 +19,15 @@ import {studies, experiences} from "@/constants";
               <td><b>{{ exp.date }}</b></td>
               <td>
                 <h3>{{ exp.title }}</h3>
-                <span style="color: #ef476f">{{ exp.school }}</span>
+                <div>
+                  <a target="_blank" style="color: #ef476f; cursor: pointer; text-decoration: underline;" v-if="exp.url !== ''" :href="exp.url">
+                    {{ exp.school }}
+                  </a>
+                  <span  style="color: #ef476f" v-if="exp.url === ''">
+                    {{ exp.school }}
+                  </span>
+                  <img v-if="exp.logo !== ''" :src="require(`@/assets/${exp.logo}`)" :alt="exp.logo" style="height: 20px; margin-left: 10px;"/>
+                </div>
                 <p>{{ exp.description }}</p>
               </td>
             </tr>

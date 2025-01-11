@@ -182,9 +182,9 @@ const skills = ref([
 ]);
 
 const studies = ref([
-{ id: 1, date: '2022-2025', title: 'Engineering degree, Software Engineering', school: 'EFREI PARIS', description: 'Three years engineering program in apprenticeship. Software development and Information Systems curriculum.' },
-{ id: 2, date: '2020-2022', title: 'Bachelor degree, Computer Science', school: 'Paris Institute of Technology (Paris Cité university)', description: 'Computer science and software development, combined with a generalist background. Advanced skills in concurrency and reflexivity in java.'},
-{ id: 3, date: '2016-2019', title: 'High school diploma in sciences', school: 'Lycée Henri Avril – Lamballe (France)'}
+{ id: 1, date: '2022-2025', title: 'Engineering degree, Software Engineering', school: 'EFREI PARIS', url: "https://www.efrei.fr/programme-grande-ecole/cycle-ingenieur-par-apprentissage-lsi-hybride/", logo: "efrei-logo.png", description: 'Three years engineering program in apprenticeship. Software development and Information Systems curriculum.' },
+{ id: 2, date: '2020-2022', title: 'Bachelor degree, Computer Science', school: 'Paris Institute of Technology (Paris Cité university)', url: "https://iutparis-seine.u-paris.fr/", logo: "univ-paris-cite-logo.png", description: 'Computer science and software development, combined with a generalist background. Advanced skills in concurrency and reflexivity in java.'},
+{ id: 3, date: '2016-2019', title: 'High school diploma in sciences', url: '', logo: "", school: 'Lycée Henri Avril – Lamballe (France)'}
 ]);
 
 const experiences = ref([
