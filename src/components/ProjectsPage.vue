@@ -1,5 +1,5 @@
 <script setup>
-import {projects} from "@/constants";
+import ProjectList from '@/components/ProjectsList.vue';
 import BaseLayout from "@/layouts/BaseLayout.vue";
 </script>
 <template>
@@ -14,20 +14,7 @@ import BaseLayout from "@/layouts/BaseLayout.vue";
 
     <!-- main -->
     <div class="page">
-      <section class="projects-section">
-      <ul>
-        <li v-for="project in projects.slice().reverse()" :key="project.id">
-          <router-link :to="`/projects/${project.id}`">
-            <div class="thumbnail">
-              <div class="tag">{{ project.tag }}</div>
-              <img :src="require(`@/assets/${project.img}`)" alt="{{project.title}}"/>
-            </div>
-            <h3>{{ project.title }}</h3>
-          </router-link>
-          <!--<a href="/projects/{{ project.id }}" target="_blank">View Project</a>-->
-        </li>
-      </ul>
-    </section>
+      <ProjectList/>
     </div>
   </BaseLayout>
 </template>

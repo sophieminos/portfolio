@@ -5,7 +5,7 @@
       <div class="hero-section section-bg">
         <div class="title-page hello-text">Hi there, I'm Sophie Minos</div>
         <div class="hero-container-description">
-          <div><h1>Student in <span style="color:#ef476f">Software Engineering</span></h1></div>
+          <div><h1>Software <span style="color:#ef476f">Engineer</span></h1></div>
           <div class="hero-image"></div>
           <div><h1><span style="color:#ef476f">Full-Stack</span> Developer</h1></div>
         </div>
@@ -14,21 +14,9 @@
 
     <!-- main -->
     <div class="page">
-      <section class="projects-section">
-      <h1>recent projects</h1>
-        <ul>
-          <li v-for="project in projects.slice().reverse().slice(0, 5)" :key="project.id">
-            <router-link :to="`/projects/${project.id}`">
-              <div class="thumbnail">
-                <div class="tag">{{ project.tag }}</div>
-                <img :src="require(`@/assets/${project.img}`)" alt="{{project.title}}"/>
-              </div>
-              <h3>{{ project.title }}</h3>
-            </router-link>
-          </li>
-        </ul>
-        <router-link to="/projects" class="button-item">All Projects</router-link>
-      </section>
+      
+      <ProjectList :projectCount="5" :btnAllProjects="true" :title="true"/>
+      
       <section style="display: none" class="experiences-skills-section">
         <h1>experiences & skills</h1>
         <table class="portfolio-table">
@@ -42,11 +30,11 @@
       </section>
       <section class="apprenticeship-section section-bg">
         <div class="apprenticeship-description">
-          <div>
+          <div data-type="description-para">
             I developed <b>decision-making</b> skills by regularly choosing the most effective solutions for issues or improvements in the workplace. 
           </div>
-          <div>
-            <svg  xmlns="http://www.w3.org/2000/svg">
+          <div data-type="description-svg-text">
+            <svg xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <path id="firstPath" d="M10,60 C10,60 120,100 190,60" fill="none" />
               </defs>
@@ -57,11 +45,11 @@
               </text>
             </svg>
           </div>
-          <div>
+          <div data-type="description-para">
             I <b>identified issues</b> in workflows by debugging step by step and that improved efficiency.
           </div>
-          <div>
-            <svg  xmlns="http://www.w3.org/2000/svg">
+          <div data-type="description-svg-text">
+            <svg data-type="description-svg-text" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <path id="secondPath" d="M10,80 C10,80 100,20 190,80" fill="none" />
               </defs>
@@ -73,10 +61,10 @@
             </svg>
           </div>
         </div>
-        <h1>Apprenticeship</h1>
+        <h1 style="margin: 10px 0">Apprenticeship</h1>
         <div class="apprenticeship-description">
-          <div>
-            <svg  xmlns="http://www.w3.org/2000/svg">
+          <div data-type="description-svg-text">
+            <svg xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <path id="thirdPath" d="M10,80 C10,80 100,20 190,80" fill="none" />
               </defs>
@@ -87,11 +75,11 @@
               </text>
             </svg>
           </div>
-          <div>
+          <div data-type="description-para">
             I actively <b>listened to my manager</b>, asking relevant questions, and ensuring that I clearly understood instructions, which helped me avoiding misunderstandings in the project.
           </div>
-          <div>
-            <svg  xmlns="http://www.w3.org/2000/svg">
+          <div data-type="description-svg-text">
+            <svg xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <path id="firstPath" d="M10,60 C10,60 120,100 190,60" fill="none" />
               </defs>
@@ -102,7 +90,7 @@
               </text>
             </svg>
           </div>
-          <div>
+          <div data-type="description-para">
             I gained <b>practical technical skills</b> in programmation, allowing me to contribute directly to projects with my gained expertise and be a major actor within a team.
           </div>
         </div>
@@ -137,9 +125,8 @@
 <script setup>
 
 import { ref } from 'vue';
-import {projects} from "@/constants";
 import BaseLayout from '@/layouts/BaseLayout.vue';
-
+import ProjectList from '@/components/ProjectsList.vue';
 
 const experience = ref([
   { id: 1, date: '2022-now', title: 'Experience 1' },
@@ -164,13 +151,17 @@ const experience = ref([
   border: 1px solid #fff !important;
 }
 .apprenticeship-section .apprenticeship-description div {
-  width: 25%;
-  /*min-height: 200px;*/
+  width: 35%;
   align-content: center;
   text-align: center;
   padding: 10px;
 }
-
+.apprenticeship-section .apprenticeship-description div[data-type="description-svg-text"] {
+  width: 15%;
+}
+.apprenticeship-section .apprenticeship-description div[data-type="description-para"] {
+  width: 35%;
+}
 /* testimonial section */
 .testimonial-items {
   width: 50%;

@@ -7,7 +7,7 @@
 .button-item {
     padding: 10px 30px;
     background-color: #F5F5F5;
-    text-decoration: none;
+    text-decoration: none !important;
     color: #000000;
     border-radius: 2em;
     text-transform: uppercase;
@@ -17,6 +17,45 @@
 }
 .button-item:hover {
     background-color: #c7c6bd;
+}
+
+.button-github, .button-linkedIn, .button-whatsapp, .button-gmail {
+    padding: 8px 16px;
+    text-decoration: none !important;
+    color: #fff !important;
+    border-radius: 2em;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    text-transform: lowercase !important;
+    margin: 10px 0px;
+}
+.button-github {
+    background-color: #71048f;
+}
+.button-github:hover {
+    background-color: #47035b;
+}
+
+.button-linkedIn {
+    background-color: #0e76a8;
+}
+.button-linkedIn:hover {
+    background-color: #083b53;
+}
+
+.button-whatsapp {
+    background-color: #25d366;
+}
+.button-whatsapp:hover {
+    background-color: #0c401f;
+}
+
+.button-gmail {
+    background-color: #ea4335;
+}
+.button-gmail:hover {
+    background-color: #bb001b;
 }
 
 hr {
@@ -44,6 +83,7 @@ h1, h2, h3 {
 h1 {
     font-size: 2.5em;
     color: #205E33;
+    margin: 10px 0;
 }
 h2 {
     font-size: 1.5em;
@@ -54,6 +94,7 @@ h2 {
 
 h3 {
     font-size: 1.2em;
+    margin: 10px 0;
 }
 .title-page {
     margin-top: 60px;
@@ -97,6 +138,9 @@ section {
     overflow: hidden;
     position: relative;
 }
+.projects-section ul li .thumbnail:hover {
+    background-color: #c7c6bd;
+}
 .projects-section ul li .thumbnail img {
     position: absolute;
     top: 0;
@@ -108,7 +152,6 @@ section {
 }
 .projects-section ul li .thumbnail .tag {
     position: absolute;
-    top: 0;
     right: 0;
     margin: 10px;
     padding: 2px 15px;
@@ -117,6 +160,23 @@ section {
     background-color: #205E33;
     color: #ffffff;
     border-radius: 1em;
+}
+.tag-pink {
+    background-color: #EF476F !important;
+}
+.tag-green {
+    background-color: #205E33 !important;
+}
+.tag-soft {
+    background-color: #ffffffb8 !important;
+    color: #000 !important;
+}
+
+.tag-top {
+    top: 0;
+}
+.tag-bottom {
+    bottom: 0;
 }
 .projects-section ul li a {
     text-transform: uppercase;

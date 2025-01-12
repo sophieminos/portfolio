@@ -1,12 +1,14 @@
 import {ref} from "vue";
 
 // projects
-const projects= ref([
+const projects = ref([
     {
         id: 1,
         title: 'PHP invoicing software',
+        date: 'x/x',
         description: 'During my apprenticeship I had the mission to program the invoicing software of my company. Because of the confidentiality, I won\'t share any screens or demonstrations, but only main features.',
         img: 'php-invoicing-software-project.png',
+        github_repo: '', 
         tag: 'work',
         skills: [
             { name: 'php', img: 'php-logo.png' },
@@ -33,8 +35,10 @@ const projects= ref([
     {
         id: 2,
         title: 'PHP brochure website',
+        date: '08/2022',
         description: 'This website is aimed at the business of a bookbinder. We need simple features such as galleries, categories and contact. The complexity of this website is in the design because it needs to be sophisticated based on the represented job.',
         img: 'php-brochure-website-project.png',
+        github_repo: 'https://github.com/sophiesticode/brochure-website', 
         tag: 'perso',
         skills: [
             { name: 'php', img: 'php-logo.png' },
@@ -59,8 +63,10 @@ const projects= ref([
     {
         id: 3,
         title: 'Azure distributed databases',
+        date: '05/2024',
         description: 'A school project is aimed at the practice of distributed databases. It\'s about ecommerce of regional products sold to retailers. To secure sensitive data and to anticipate mass visits by retailers at certain occasion such as East or Christmas, databases can be fragmented in several databases.',
         img: 'azure-ddb-project.png',
+        github_repo: '', 
         tag: 'school',
         skills: [
             { name: 'SQL with Azure', img: 'azure-logo.png' },
@@ -78,9 +84,11 @@ const projects= ref([
     },
     {
         id: 4,
-        title: 'Web api with cloud monitoring',
+        title: 'api and monitoring with minikube',
+        date: '12/2024',
         description: 'A school project',
         img: 'devops-project.png',
+        github_repo: 'https://github.com/sophiesticode/webapi-minikube', 
         tag: 'school',
         skills: [
             { name: 'Docker', img: 'docker-logo.png' },
@@ -98,15 +106,15 @@ const projects= ref([
             { name: 'Alerts', description: 'Alerts using Prometheus in Grafana' },
             { name: 'Logs', description: 'Request to extract relevant informations from logs using Loki in Grafana' },
         ],
-        gallery: [
-            
-        ]
+        gallery: []
     },
     {
         id: 5,
         title: 'Django ecommerce website',
+        date: '09/2023',
         description: 'This website is aimed at the business of an illustrator. It includes a lot of features such as purchases, slideshow, blog, a rich admin and customer interface and others.',
         img: 'django-ecommerce-project.png',
+        github_repo: '', 
         tag: 'perso',
         skills: [
             { name: 'django (python)', img: 'django-logo.png' },
@@ -135,8 +143,10 @@ const projects= ref([
     {
         id: 6,
         title: 'IOS flashcards app',
+        date: '08/2024',
         description: 'A flashcards app to review efficiently vocabulary. I programmed and used it while I was in Toronto to improve my English.',
         img: 'ios-project.png',
+        github_repo: '', 
         tag: 'perso',
         skills: [
             { name: 'swiftui', img: 'swiftui-logo.png' },
@@ -169,9 +179,26 @@ const projects= ref([
             { src: 'ios-project-detail-9.png', legend: 'Flashcards quiz for landscape mode' },
             { src: 'ios-project-detail-11.png', legend: 'List of all themes' }
         ]
-    }
+    },
+    {
+        id: 7,
+        title: 'cloud Flask API and wuejs website',
+        date: '01/2025',
+        description: 'A school project',
+        img: 'cloudapi-project.png',
+        github_repo: '', 
+        tag: 'school',
+        skills: [
+            { name: 'Docker', img: 'docker-logo.png' },
+            { name: 'Flask', img: 'python-logo.png' },
+            { name: 'VueJS', img: 'vue-js-logo.png' },
+            { name: 'Kubernetes', img: 'kubernetes-logo.png' },
+        ],
+        video: '',
+        features: [],
+        gallery: []
+    },
 ]);
-
 const skills = ref([
     { id: 1, name: 'Web development' },
     { id: 2, name: 'Mobile development'},

@@ -76,13 +76,11 @@ export default {
       console.log("=>", this.isMobile);
     },
     handleClickMenuOpen() {
-      console.log("open");
       if(this.isMobile && this.$refs.menuHamburger.getAttribute("aria-expanded") == "false"){
         this.$refs.menuHamburger.setAttribute("aria-expanded", "true");
       }
     },
     handleClickMenuClose() {
-      console.log("close");
       if(this.isMobile && this.$refs.menuHamburger.getAttribute("aria-expanded") == "true"){
         this.$refs.menuHamburger.setAttribute("aria-expanded", "false"); 
       }
